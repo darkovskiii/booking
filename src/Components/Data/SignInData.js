@@ -1,17 +1,14 @@
 import FacebookIcon from "../../Images/Icons/FacebookIcon";
 import GoogleIcon from "../../Images/Icons/GoogleIcon";
 import MobileIcon from "../../Images/Icons/MobileIcon";
+import LoginBox from "../UI/LoginBox";
 import classes from "./SignInData.module.css";
 
 const SignInData = () => {
   return (
     <div className={classes.container}>
       <h2>Sign in or create an account</h2>
-      <div className={classes.sign}>
-        <h5>Email address</h5>
-        <input className={classes.action} />
-        <button className={classes.button}>Continue with email</button>
-      </div>
+      <LoginBox />
       <p className={classes.textline}>
         <span>or use one of these options</span>
       </p>

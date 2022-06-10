@@ -1,0 +1,90 @@
+.card {
+  border: none;
+  border-radius: 5px;
+  transform: translate(0, -50%);
+}
+.form {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  padding: 5px 5px;
+  gap: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #febb02;
+}
+.longlabel {
+  width: 43%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: text;
+}
+.middlelabel {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.shortlabel {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.backitems {
+  position: absolute;
+  left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.backitems span {
+  padding: 20px;
+  color: #aeaeae;
+}
+.longinput,
+.middleinput,
+.shortinput {
+  width: 100%;
+  padding-left: 50px;
+  height: 52px;
+  border: none;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  outline: none;
+}
+.longinput:hover,
+.longinput:active,
+.middleinput:hover,
+.middleinput:active,
+.shortinput:hover,
+.shortinput:active {
+  /* background-color: #00487a; */
+  border-radius: 3px;
+  border: 1px solid #cd8900;
+}
+
+.button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  width: 12%;
+  height: 52px;
+  /* margin-top: 32px; */
+  background-color: #0071c2;
+  cursor: pointer;
+}
+.button:hover,
+.button:active {
+  background-color: #00487a;
+  color: #fff;
+}

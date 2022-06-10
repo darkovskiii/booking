@@ -1,0 +1,57 @@
+.button {
+  background-color: #003580;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 16px 16px;
+  line-height: 20px;
+  margin: 0.4rem;
+  border: none;
+}
+.button:hover,
+.button:active {
+  background-color: rgba(0, 113, 194, 0.2);
+}
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  background-color: #262626;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 6px;
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: -40%;
+  left: 50%;
+  margin-left: -70px;
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: #262626 transparent transparent transparent;
+  transform: rotate(180deg);
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

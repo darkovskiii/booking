@@ -1,0 +1,48 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-color: #003580;
+  margin: 0 auto;
+  max-width: 1110px;
+  padding: 48px 5px 78px;
+  position: relative;
+}
+.wrapper {
+  margin: auto 0;
+  max-width: 890px;
+}
+.banner h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 62px;
+  margin: 0;
+  color: #fff;
+}
+#herotext {
+  margin-bottom: 0;
+  color: #fff;
+  margin-top: 4px;
+  font-size: 24px;
+  line-height: 32px;
+}
+.button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  width: 20%;
+  height: 48px;
+  margin-top: 32px;
+  background-color: #0071c2;
+  cursor: pointer;
+}
+.button:hover,
+.button:active {
+  background-color: #00487a;
+  color: #fff;
+}

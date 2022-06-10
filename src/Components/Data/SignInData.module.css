@@ -3,49 +3,9 @@
   margin: 0 auto;
 }
 .container h2 {
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
-.sign {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.sign h5 {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 500;
-}
-.action {
-  display: flex;
-  width: 100%;
-  height: 36px;
-  margin: 5px 0;
-  outline: none;
-}
-.action:focus {
-  border: 2px solid #0071c2;
-}
-.button {
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 15px;
-  font-weight: 600;
-  width: 100%;
-  height: 48px;
-  margin: 10px 0;
-  background-color: #0071c2;
-  border-color: #0071c2;
-  cursor: pointer;
-}
-.button:hover,
-.button:active {
-  background-color: #00487a;
-}
 .textline {
   font-size: 14px;
   color: #383838;

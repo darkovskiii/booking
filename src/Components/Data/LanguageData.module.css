@@ -14,11 +14,22 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  position: relative;
 }
 .anchor img {
   border: 1px solid #e6e6e6;
   border-radius: 50%;
   width: 24px;
+}
+.anchor span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 .anchor:hover,
 .anchor:active {

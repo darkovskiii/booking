@@ -1,6 +1,9 @@
 import classes from "./LanguageData.module.css";
 
 const LanguageData = (props) => {
+  const selectedLanguageHandler = (event) => {
+    props.onSelectedLanguage(event.target.textContent);
+  };
   return (
     <div className={classes.content}>
       <h4>Suggested for you</h4>
@@ -12,14 +15,14 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8b
 "
             alt="UK flag"
           />
-          <span>English (US)</span>
+          <span onClick={selectedLanguageHandler}>English (US)</span>
         </a>
         <a onClick={props.onClick} className={classes.anchor}>
           <img
             src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba856a8bb081c7ded40efa.png"
             alt="USA flag"
           />
-          <span>English (UK)</span>
+          <span onClick={selectedLanguageHandler}>English (UK)</span>
         </a>
         <a onClick={props.onClick} className={classes.anchor}>
           <img
@@ -27,18 +30,14 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8b
   https://t-cf.bstatic.com/static/img/flags/new/48-squared/hr/e7a46f4dad977aecafa6a3680972e0c137a1bc41.png"
             alt="Croatian flag"
           />
-          <span>Hrvatski</span>
+          <span onClick={selectedLanguageHandler}>Hrvatski</span>
         </a>
-        <a
-          onClick={props.onClick}
-          /* #TODO checking if props.onClick will shut the modal box*/
-          className={classes.anchor}
-        >
+        <a onClick={props.onClick} className={classes.anchor}>
           <img
             src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/ru/2277320023a64803843c36ca6aa48ad77523dd0d.png"
             alt="Russian flag"
           />
-          <span>Рускии</span>
+          <span onClick={selectedLanguageHandler}>Рускии</span>
         </a>
       </div>
     </div>

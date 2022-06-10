@@ -1,0 +1,27 @@
+.button {
+  background-color: white;
+  color: #0071c2;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px 16px;
+  line-height: 20px;
+  border-radius: 2px;
+  margin: 0.2rem;
+  border: 1.25px solid #0071c2;
+}
+.button:hover,
+.button:active {
+  background-color: rgba(251, 254, 255, 0.95);
+}
+.button-blue {
+  background-color: #003580;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1.25px solid white;
+}
+.button-blue:hover,
+.button-blue:active {
+  background-color: rgba(0, 113, 194, 0.2);
+}
