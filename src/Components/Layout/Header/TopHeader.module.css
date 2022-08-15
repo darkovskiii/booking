@@ -6,8 +6,9 @@
   justify-content: space-between;
   align-items: center;
   background-color: #003580;
-  padding: 8px 16px 0;
-  max-width: 1110px;
+  padding: 12px 32px 0 32px;
+  max-width: 1140px;
+  max-height: 60px;
   margin: 0 auto;
 }
 .button {
@@ -16,5 +17,6 @@
 }
 .header-text {
   color: white;
-  font-family: "Roboto", sans-serif;
+  padding: 8px 16px 8px 0;
+  /* height: 40px; */
 }

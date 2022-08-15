@@ -1,59 +1,45 @@
 import React, { useState } from "react";
 import Card from "../../Card/Card";
 import classes from "./HeroSearchBox.module.css";
-import ExitIcon from "../../../Images/Icons/ExitIcon";
-import DatePicker from "../../../Images/Icons/DatePicker";
-import PlacePicker from "../../../Images/Icons/PlacePicker";
-import Button from "../../Card/Button";
-import PersonIcon from "../../../Images/Icons/PersonIcon";
+import ReactDatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { Link } from "react-router-dom";
+import GuestInputs from "./SearchBoxComponents/GuestInputs";
+import SearchBox from "./SearchBoxComponents/SearchBox";
+// import DatePicker from "../../../Images/Icons/DatePicker";
 
-const HeroSearchBox = (props) => {
-  const [enteredPlace, setEnteredPlace] = useState("");
-
-  const addLocationHandler = (event) => {
-    event.preventDefault();
-    if (enteredPlace.trim().length === 0) {
-      return;
-    }
-    props.onAddLocation(enteredPlace);
-    setEnteredPlace("");
-  };
-
-  const locationHandler = (event) => {
-    setEnteredPlace(event.target.value);
-  };
+const HeroSearchBox = () => {
+  const [dateRange, setDateRange] = useState([null, null]);
+  const [startDate, endDate] = dateRange;
 
   return (
     <Card className={classes.card}>
-      <form onSubmit={addLocationHandler} className={classes.form}>
-        <label className={classes.longlabel}>
-          <div className={classes.backitems}>
-            <PlacePicker />
-            <span>Where are you going?</span>
-            {/* <ExitIcon /> #TODO when selected location X button appears  */}
-          </div>
-          <input
-            className={classes.longinput}
-            value={enteredPlace}
-            onChange={locationHandler}
-          />
-        </label>
-        <label className={classes.shortlabel}>
-          <div className={classes.backitems}>
+      <div className={classes.search}>
+        <SearchBox />
+        <div className={classes.dateInputs}>
+          {/* <div className={classes.searchIcon}>
             <DatePicker />
-          </div>
-          <input className={classes.shortinput} />
-        </label>
-        <label className={classes.middlelabel}>
-          <div className={classes.backitems}>
-            <PersonIcon />
-          </div>
-          <input className={classes.middleinput} />
-        </label>
-        <Button type="submit" className={classes.button}>
-          Add place
-        </Button>
-      </form>
+          </div> */}
+          <ReactDatePicker
+            selectsRange={true}
+            startDate={startDate}
+            endDate={endDate}
+            onChange={(update) => {
+              setDateRange(update);
+            }}
+            monthsShown={2}
+            minDate={new Date()}
+            placeholderText="Check in - Check out"
+            dateFormat=" MMM, E d "
+          />
+
+          {/* #TODO Add Icons to Date and Place */}
+        </div>
+        <GuestInputs />
+        <Link to="/searchresults" className={classes.button}>
+          Search
+        </Link>
+      </div>
     </Card>
   );
 };

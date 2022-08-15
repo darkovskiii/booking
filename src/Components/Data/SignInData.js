@@ -13,18 +13,18 @@ const SignInData = () => {
         <span>or use one of these options</span>
       </p>
       <div className={classes.icons}>
-        <a>
+        <a href="/#">
           <FacebookIcon />
         </a>
-        <a>
+        <a href="/#">
           <GoogleIcon />
         </a>
-        <a>
+        <a href="/#">
           <MobileIcon />
         </a>
       </div>
       <div className={classes.more}>
-        <a>More ways to sign in</a>
+        <a href="/#">More ways to sign in</a>
       </div>
       <p className={classes.textline}></p>
       <div className={classes.footer}>

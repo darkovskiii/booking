@@ -4,34 +4,34 @@ import Button from "../Card/Button";
 import CurrencyData from "../Data/CurrencyData";
 import LanguageData from "../Data/LanguageData";
 import ExitIcon from "../../Images/Icons/ExitIcon";
+import { useContext } from "react";
+import LanguageCurrencyContext from "../../store/lang-currency-context";
 
-const ModalBox = (props) => {
+const ModalBox = () => {
+  const ctxLang = useContext(LanguageCurrencyContext);
+  const ctxCurr = useContext(LanguageCurrencyContext);
+
+  const closeModalHandler = () => {
+    if (!ctxLang.toggleLanguage) {
+      ctxLang.setToggleLanguage(true);
+    } else if (!ctxCurr.toggleCurrency) {
+      ctxLang.setToggleCurrency(true);
+    }
+  };
   return (
     <div>
-      <div className={classes.backdrop} onClick={props.onModalHandler}></div>
+      <div className={classes.backdrop} onClick={closeModalHandler}></div>
       <Card className={classes.modal}>
         <header className={classes.header}>
-          <h3>Select your currency</h3>
-          <Button onClick={props.onModalHandler}>
+          <h3>
+            Select your {`${ctxCurr.toggleCurrency ? "language" : "currency"}`}
+          </h3>
+          <Button onClick={closeModalHandler}>
             <ExitIcon />
           </Button>
         </header>
-        {props.modalCurrencyData ? (
-          <CurrencyData
-            onClick={props.onModalHandler}
-            onSelectedCurrency={props.onSelectedCurrency}
-          />
-        ) : (
-          ""
-        )}
-        {props.modalLanguageData ? (
-          <LanguageData
-            onClick={props.onModalHandler}
-            onSelectedLanguage={props.onSelectedLanguage}
-          />
-        ) : (
-          ""
-        )}
+        {!ctxCurr.toggleCurrency && <CurrencyData />}
+        {!ctxLang.toggleLanguage && <LanguageData />}
       </Card>
     </div>
   );

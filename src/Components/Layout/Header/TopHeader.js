@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import LongBlueHeaderButton from "./Header Buttons/LongBlueHeaderButton";
 import LongHeaderButton from "./Header Buttons/LongHeaderButton";
 import SmallHeaderButton from "./Header Buttons/SmallHeaderButton";
@@ -8,69 +8,49 @@ import QuestionMarkIcon from "../../../Images/Icons/QuestionMarkIcon";
 import NotificationIcon from "../../../Images/Icons/NotificationIcon";
 import SignInModal from "../../UI/SignInModal";
 import AuthContext from "../../../store/auth-context";
+import BookingLogo from "./Header Icons/BookingLogo";
+import LanguageCurrencyContext from "../../../store/lang-currency-context";
 
 const TopHeader = (props) => {
   const ctx = useContext(AuthContext);
-  const [showModalCurrency, setShowModalCurrency] = useState(false);
-  const [showModalLanguage, setShowModalLanguage] = useState(false);
+  const ctxLang = useContext(LanguageCurrencyContext);
+  const ctxCurr = useContext(LanguageCurrencyContext);
   const [customerService, setCustomerService] = useState(false);
-  const [selectedCurrency, setSelectedCurrency] = useState("EUR");
-  const [selectedLanguage, setSelectedLanguage] = useState("Language");
 
-  const hideModalHandler = () => {
-    setShowModalCurrency(false);
-    setShowModalLanguage(false);
-  };
-  const showModalHandlerCurrency = () => {
-    setShowModalCurrency(true);
-  };
-  const showModalHandlerLanguage = () => {
-    setShowModalLanguage(true);
-  };
   const customerServiceHandler = () => {
     setCustomerService(true);
+    console.log(customerService);
   };
-  const selectedCurrencyHandler = (currency) => {
-    setSelectedCurrency(currency);
+  const toggleLanguage = () => {
+    ctxLang.setToggleLanguage(false);
   };
-  const selectedLanguageHandler = (language) => {
-    setSelectedLanguage(language);
+  const toggleCurrency = () => {
+    ctxCurr.setToggleCurrency(false);
   };
+
   return (
     <div className={classes.wrapper}>
-      {showModalCurrency && (
-        <ModalBox
-          onSelectedCurrency={selectedCurrencyHandler}
-          onModalHandler={hideModalHandler}
-          modalCurrencyData={showModalCurrency}
-        />
-      )}
-      {showModalLanguage && (
-        <ModalBox
-          onSelectedLanguage={selectedLanguageHandler}
-          onModalHandler={hideModalHandler}
-          modalLanguageData={showModalLanguage}
-        />
-      )}
+      {!ctxCurr.toggleCurrency && <ModalBox />}
+      {!ctxLang.toggleLanguage && <ModalBox />}
       {!ctx.isLoggedIn && ctx.signInModal && (
         <SignInModal onModalHandler={ctx.hideSignInHandler} />
       )}
       <div className={classes.header}>
         <div className={classes["header-text"]}>
-          <h2>Booking.com</h2>
+          <BookingLogo />
         </div>
         <div className={classes.button}>
           <SmallHeaderButton
-            onClick={showModalHandlerCurrency}
+            onClick={toggleCurrency}
             tooltipText="Choose your currency"
           >
-            {selectedCurrency}
+            {ctxCurr.selectedCurrency}
           </SmallHeaderButton>
           <SmallHeaderButton
-            onClick={showModalHandlerLanguage}
+            onClick={toggleLanguage}
             tooltipText="Choose your language"
           >
-            {selectedLanguage}
+            {ctxLang.selectedLanguage}
           </SmallHeaderButton>
           <SmallHeaderButton tooltipText="Contact Customer Service">
             <QuestionMarkIcon />

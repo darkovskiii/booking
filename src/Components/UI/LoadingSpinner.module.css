@@ -1,0 +1,35 @@
+.card {
+  position: absolute;
+  transform: translate(50%, 0);
+  padding: 40px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.spinner {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.spinner:after {
+  content: " ";
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #0071c2;
+  border-color: #0071c2 #0071c2 rgb(0, 113, 194, 0.4) rgba(0, 113, 194, 0.4);
+  animation: spinner 1s linear infinite;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

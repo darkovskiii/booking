@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.search {
+  background-color: #febb02;
+}
+.inputplace {
+  display: flex;
+  flex-direction: column;
+}
+.guests {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  background-color: #febb02;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: column;
+}
+.checkbox p {
+  font-size: 10px;
+}
+.checkboxtop,
+.checkboxbot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkboxtop label,
+.checkboxbot label {
+  display: flex;
+}

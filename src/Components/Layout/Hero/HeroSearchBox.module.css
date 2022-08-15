@@ -1,90 +1,85 @@
 .card {
   border: none;
   border-radius: 5px;
-  transform: translate(0, -50%);
+  transform: translate(0, -60%);
+  max-width: 1100px;
 }
-.form {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-evenly;
-  padding: 5px 5px;
-  gap: 5px;
-  border: none;
-  border-radius: 5px;
-  background-color: #febb02;
-}
-.longlabel {
-  width: 43%;
-  display: flex;
-  align-items: center;
-  position: relative;
-  cursor: text;
-}
-.middlelabel {
-  width: 25%;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.shortlabel {
-  width: 20%;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.backitems {
-  position: absolute;
-  left: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-.backitems span {
-  padding: 20px;
-  color: #aeaeae;
-}
-.longinput,
-.middleinput,
-.shortinput {
-  width: 100%;
-  padding-left: 50px;
-  height: 52px;
-  border: none;
-  border-radius: 3px;
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 500;
-  outline: none;
-}
-.longinput:hover,
-.longinput:active,
-.middleinput:hover,
-.middleinput:active,
-.shortinput:hover,
-.shortinput:active {
-  /* background-color: #00487a; */
-  border-radius: 3px;
-  border: 1px solid #cd8900;
-}
-
 .button {
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
   width: 12%;
   height: 52px;
-  /* margin-top: 32px; */
+  margin-left: 4px;
   background-color: #0071c2;
   cursor: pointer;
+  text-decoration: none;
 }
 .button:hover,
 .button:active {
   background-color: #00487a;
   color: #fff;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  border-radius: 4px;
+  padding: 4px;
+  background-color: #febb02;
+  margin: 24px 0 16px;
+  color: #333;
+  width: 100%;
+}
+.dateInputs {
+  display: flex;
+  padding: 0 4px;
+  width: 22%;
+}
+.dateInputs input {
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif;
+}
+.dateInputs input:hover {
+  cursor: pointer;
+}
+.search input,
+.searchInputs a {
+  background-color: white;
+  border: 0;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 14px;
+  padding: 15px;
+  height: 52px;
+  width: 100%;
+  text-decoration: none;
+}
+.search input:hover {
+  border: 1px solid #cd8900;
+}
+.searchIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+}
+
+input:focus {
+  outline: none;
+}
+.searchIcon svg {
+  font-size: 35px;
 }

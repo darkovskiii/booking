@@ -1,0 +1,43 @@
+.guestInputs {
+  display: flex;
+  width: 25%;
+}
+.guestInputs a {
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-weight: 500;
+  background-color: white;
+  border-radius: 2px;
+  font-size: 14px;
+  padding: 15px;
+  height: 52px;
+  width: 100%;
+  text-decoration: none;
+  line-height: 20px;
+}
+
+.guestInputs a:hover {
+  border: 1px solid #cd8900;
+  cursor: pointer;
+}
+.searchIcon {
+  padding-right: 10px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+}
+.searchIcon svg {
+  font-size: 35px;
+}
+.arrows {
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  transform: translate(10px, 0);
+}
+.arrows svg {
+  margin: -6px;
+}

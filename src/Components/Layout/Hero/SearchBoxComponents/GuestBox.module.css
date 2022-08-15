@@ -1,0 +1,63 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  /* transform: translate(); */
+  top: 110%;
+  right: 12.5%;
+  width: 30%;
+  /* overflow: hidden;
+  overflow-y: auto; */
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.adultsField {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 15px;
+}
+hr {
+  color: 1px solid rgb(150, 150, 150);
+  width: 80%;
+}
+.adultsField p {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  padding: 4px 15px;
+}
+.stepper {
+  display: flex;
+  align-items: center;
+}
+.stepper p {
+  display: flex;
+  justify-content: center;
+  width: 20px;
+}
+.button {
+  background-color: white;
+  color: #0071c2;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px 16px;
+  line-height: 20px;
+  border-radius: 2px;
+  margin: 0.2rem;
+  border: 1.25px solid #0071c2;
+  width: 40px;
+  height: 40px;
+}
+.button:hover,
+.button:active {
+  background-color: rgba(204, 234, 255, 0.3);
+}
+
+.button:hover:disabled,
+.button:active:disabled {
+  background-color: rgba(204, 234, 255, 0.3);
+  border-color: #0071c2;
+  cursor: not-allowed;
+}

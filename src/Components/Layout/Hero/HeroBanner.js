@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import classes from "./HeroBanner.module.css";
-import Button from "../../Card/Button";
+// import Button from "../../Card/Button";
 import SignInModal from "../../UI/SignInModal";
 import AuthContext from "../../../store/auth-context";
 
@@ -14,14 +14,13 @@ const HeroBanner = (props) => {
       )}
       <div className={classes.wrapper}>
         {!ctx.isLoggedIn ? (
-          <h1>A lifetime of discounts? It's Genius.</h1>
+          <h1>Find your next stay</h1>
         ) : (
           <h1>Stay more, save more. It’s Genius.</h1>
         )}
         {!ctx.isLoggedIn ? (
           <p id={classes.herotext}>
-            Get rewarded for your travels – unlock instant savings of 10% or
-            more with a free Booking.com account
+            Search deals on hotels, homes, and much more...
           </p>
         ) : (
           <p id={classes.herotext}>
@@ -30,11 +29,11 @@ const HeroBanner = (props) => {
           </p>
         )}
 
-        {!ctx.isLoggedIn && (
+        {/* {!ctx.isLoggedIn && (
           <Button className={classes.button} onClick={ctx.showSignInHandler}>
             Sign in / Register
           </Button>
-        )}
+        )} */}
       </div>
     </div>
   );

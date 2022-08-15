@@ -1,0 +1,24 @@
+.wrapper {
+  background-color: #003580;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  position: absolute;
+  left: 10%;
+  top: 5%;
+}
+.wrapper h1 {
+  padding-top: 50px;
+  color: #fff;
+  font-size: 62px;
+}
+.wrapper h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 48px;
+}
+.wrapper a {
+  padding: 50px;
+}
